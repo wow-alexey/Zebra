@@ -1,5 +1,53 @@
-$color: #fff;
+@import "custom";
+@import "default-class";
+@import "layout";
+//fonts
+//font-family: 'Josefin Slab', serif;
 
-body{
-  color: $color;
+//Header styles
+header {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 2px -2px gray;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    .logo {
+      display: inline-block;
+      margin: 25px 0 22px 20px;
+      font-size: 38px;
+      font-weight: bold;
+      .ZE {
+        color: $greyFont;
+        transition: all 0.4s linear
+      }
+      .BRA {
+        color: $aquaFont;
+        transition: all 0.4s linear
+      }
+      a:hover {
+        .ZE {
+          color: $aquaFont;
+          transition: all 0.4s linear
+        }
+        .BRA {
+          color: $greyFont;
+          transition: all 0.4s linear
+        }
+      }
+
+    }
+    .nav-bar {
+      display: inline-block;
+      margin-left: 19%;
+      color: $greyFont;
+      height: 90px;
+      //ХОВЕР НА ВЕСЬ ХЕДЕР (АШКИ НА ВЕСЬ ХЕДЕР)
+      ul {
+        li {
+          display: inline-block;
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }

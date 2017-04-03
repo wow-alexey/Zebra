@@ -1,0 +1,24 @@
+@import "custom";
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0 auto;
+  color: $standartFont;
+  background: #d9fff5;
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+  ul{
+    margin: 0 auto;
+    padding: 0;
+  }
+  .wrapper{
+    margin: 0 128px 0 128px;
+  }
+}
