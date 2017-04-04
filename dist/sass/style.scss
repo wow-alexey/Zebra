@@ -7,10 +7,13 @@
 //Header styles
 header {
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 2px -2px gray;
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.31);
+  position: absolute;
+  width: 100%;
   .wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     .logo {
       display: inline-block;
       margin: 25px 0 22px 20px;
@@ -38,16 +41,85 @@ header {
     }
     .nav-bar {
       display: inline-block;
-      margin-left: 19%;
+      margin-left: 10%;
       color: $greyFont;
       height: 90px;
-      //ХОВЕР НА ВЕСЬ ХЕДЕР (АШКИ НА ВЕСЬ ХЕДЕР)
       ul {
+        height: 100%;
+        font-size: 0;
+        display: table;//FOR SOME SAFARI VERSIONS
         li {
           display: inline-block;
           font-size: 18px;
+          height: 100%;
+          line-height: 5;
+          transition: all 0.4s linear;
+          &:hover{
+            background: $redBg;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.4s linear;
+            a{
+              color: $standartBg;
+            }
+          }
+          a{
+            margin: 0 25px;
+          }
         }
       }
     }
+    .cart{
+      display: flex;
+      cursor: pointer;
+      &:hover{
+        .cart-logo{
+          background-position: top;
+          -webkit-transition:background-position .2s linear;
+          -moz-transition:background-position .2s linear;
+          -o-transition:background-position .2s linear;
+          transition:background-position .2s linear;
+        }
+        .cart-price{
+          color: $redBg;
+          transition: all 0.2s linear;
+        }
+      }
+      .cart-logo{
+        width: 29px;
+        height: 26px;
+        display: inline-block;
+        background: url('../img/cart-sprite.png') no-repeat;
+        overflow: hidden;
+        background-position: bottom;
+        -webkit-transition:background-position .2s linear;
+        -moz-transition:background-position .2s linear;
+        -o-transition:background-position .2s linear;
+        transition:background-position .2s linear;
+      }
+      .cart-price{
+        display: flex;
+        align-items: center;
+        color:  #9d9d9d;
+        font-size: 24px;
+        margin-left: 10px;
+        transition: all 0.2s linear;
+        &:after{
+          content: "▼";
+          font-size: 17px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+//Main styles
+main{
+  .zebra-img{
+    display: block;
+    height: 100vh;
+    background: url("../img/zebra.jpg") no-repeat;
+    background-size: 100%;
   }
 }
