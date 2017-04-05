@@ -13,7 +13,7 @@ header {
   box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.31);
   position: absolute;
   width: 100%;
-  z-index:99999;
+  z-index: 99999;
   .wrapper {
     display: flex;
     align-items: center;
@@ -51,63 +51,63 @@ header {
       ul {
         height: 100%;
         font-size: 0;
-        display: table;//FOR SOME SAFARI VERSIONS
+        display: table; //FOR SOME SAFARI VERSIONS
         li {
           display: inline-block;
           font-size: 18px;
           height: 100%;
           line-height: 5;
           transition: all 0.4s linear;
-          &:hover{
+          &:hover {
             background: $redBg;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.4s linear;
-            a{
+            a {
               color: $standartBg;
             }
           }
-          a{
+          a {
             margin: 0 25px;
           }
         }
       }
     }
-    .cart{
+    .cart {
       display: flex;
       cursor: pointer;
-      &:hover{
-        .cart-logo{
+      &:hover {
+        .cart-logo {
           background-position: top;
-          -webkit-transition:background-position .2s linear;
-          -moz-transition:background-position .2s linear;
-          -o-transition:background-position .2s linear;
-          transition:background-position .2s linear;
+          -webkit-transition: background-position .2s linear;
+          -moz-transition: background-position .2s linear;
+          -o-transition: background-position .2s linear;
+          transition: background-position .2s linear;
         }
-        .cart-price{
+        .cart-price {
           color: $redBg;
           transition: all 0.2s linear;
         }
       }
-      .cart-logo{
+      .cart-logo {
         width: 29px;
         height: 26px;
         display: inline-block;
         background: url('../img/cart-sprite.png') no-repeat;
         overflow: hidden;
         background-position: bottom;
-        -webkit-transition:background-position .2s linear;
-        -moz-transition:background-position .2s linear;
-        -o-transition:background-position .2s linear;
-        transition:background-position .2s linear;
+        -webkit-transition: background-position .2s linear;
+        -moz-transition: background-position .2s linear;
+        -o-transition: background-position .2s linear;
+        transition: background-position .2s linear;
       }
-      .cart-price{
+      .cart-price {
         display: flex;
         align-items: center;
-        color:  #9d9d9d;
+        color: #9d9d9d;
         font-size: 24px;
         margin-left: 10px;
         transition: all 0.2s linear;
-        &:after{
+        &:after {
           content: "▼";
           font-size: 17px;
           margin-left: 10px;
@@ -117,54 +117,101 @@ header {
   }
 }
 
-
 //Main styles
-main{
- .full-height{
-   height: 100vh;
-   width: 100%;
-   position: relative;
-   display: block;
-   box-sizing: border-box;
-   .corusel-img{
-     height: 100vh;
-     picture{
-       display: flex;
-       img{
-         height: 100vh;
-         width: 100%;
-       }
-     }
-   }
-   .corusel-content{
-     position: absolute;
-     height: 100%;
-     width: 100%;
-     top: 0;
-     left: 0;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     color: $standartBg;
-     text-shadow: 0 0 5px black;
-     h4{
-       font-size: 22px;
-       font-weight: 400;
-       line-height: 19.5px;
-       text-align: left;
-       margin: 22px auto;
-       word-spacing: 23px;
-     }
-     h2{
-       font-family: Impact;
-       font-size: 116px;
-       font-weight: 400;
-       line-height: 19.5px;
-       text-align: left;
-       letter-spacing: 1px;
-       margin: 40px auto;
-     }
-   }
- }
+main {
+  .full-height {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    .corusel-img {
+      height: 100vh;
+      picture {
+        display: flex;
+        img {
+          height: 100vh;
+          width: 100%;
+        }
+      }
+    }
+    .corusel-content {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $standartBg;
+      text-shadow: 0 0 5px black;
+      h4 {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 19.5px;
+        text-align: left;
+        margin: 22px auto;
+        word-spacing: 23px;
+      }
+      h2 {
+        font-family: Impact;
+        font-size: 116px;
+        font-weight: 400;
+        line-height: 19.5px;
+        text-align: left;
+        letter-spacing: 1px;
+        margin: 40px auto;
+      }
+    }
+  }
+  .wrapper {
+    .sale-block {
+      margin: 45px 0 45px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .sale {
+        width: 245px;
+        height: 250px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        &.priceOf {
+          padding: 23px 30px;
+        }
+        &.aquaBg {
+          background-color: $aquaBg;
+        }
+        &.sandBg {
+          background-color: $sandBg;
+        }
+        &.pinkBg {
+          background-color: $pinkBg;
+        }
+        &.yellowBg {
+          background-color: $yellowBg;
+        }
+        h6{
+          color:  $standartBg;
+          font-size: 30px;
+          font-weight: 700;
+          text-align: left;
+          margin: 0 0;
+          max-width: 185px;
+          word-wrap: break-word;
+        }
+        span{
+          color:  $standartBg;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 19.5px;
+          margin-left: 4px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
