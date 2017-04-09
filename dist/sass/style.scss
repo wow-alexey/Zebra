@@ -178,21 +178,60 @@ main {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-
+        position: relative;
+        transition: all 0.2s linear;
+        &:hover{
+          transform: scale(1.1);
+          box-shadow: 0 0 20px rgba(0,0,0,0.5);
+          transition: all 0.2s linear;
+          h5{
+            color:  rgba(0, 0, 0, 0.7);
+            transition: all 0.2s linear;
+          }
+        }
         &.priceOf {
           padding: 23px 30px;
         }
         &.aquaBg {
           background-color: $aquaBg;
+          span{
+            margin-top: 23px;
+          }
+          img{
+            position: absolute;
+            top: 8px;
+            right: 0;
+          }
         }
         &.sandBg {
           background-color: $sandBg;
+          img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
         }
         &.pinkBg {
           background-color: $pinkBg;
+          img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
         }
         &.yellowBg {
           background-color: $yellowBg;
+          &:hover{
+            h1{
+              transform: scale(1, 1);
+              transition: all 0.2s linear;
+            }
+            h4{
+              padding-left: 20px;
+              max-width: 132px;
+              transition: all 0.2s linear;
+            }
+          }
         }
         h6{
           color:  $standartBg;
@@ -210,6 +249,40 @@ main {
           line-height: 19.5px;
           margin-left: 4px;
           text-transform: uppercase;
+        }
+        h5{
+          color:  rgba(0, 0, 0, 0.5);
+          font-size: 49px;
+          font-weight: 700;
+          position: absolute;
+          margin: 0;
+          bottom: 8%;
+          transition: all 0.2s linear;
+        }
+        h1{
+          transform: scale(1, -1);
+          color:  $standartBg;
+          font-size: 106px;
+          font-weight: 700;
+          margin: 0 auto;
+          transition: all 0.2s linear;
+        }
+        h2{
+          color:  $standartBg;
+          font-size: 64px;
+          font-weight: 700;
+          margin: 0 auto;
+        }
+        h4{
+          display: inline-block;
+          max-width: 127px;
+          padding-left: 15px;
+          background: $standartBg;
+          color: $yellowBg;
+          font-size: 26px;
+          font-weight: 700;
+          margin: 5px 0 0 0;
+          transition: all 0.2s linear;
         }
       }
     }
