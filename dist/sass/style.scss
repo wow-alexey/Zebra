@@ -4,13 +4,10 @@
 @import "slick";
 @import "layout";
 
-//fonts
-// font-family: 'Josefin Slab', serif;
-
 //Header styles
 header {
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.31);
   position: absolute;
   width: 100%;
   z-index: 99999;
@@ -180,12 +177,12 @@ main {
         flex-direction: column;
         position: relative;
         transition: all 0.2s linear;
-        &:hover{
+        &:hover {
           transform: scale(1.1);
-          box-shadow: 0 0 20px rgba(0,0,0,0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
           transition: all 0.2s linear;
-          h5{
-            color:  rgba(0, 0, 0, 0.7);
+          h5 {
+            color: rgba(0, 0, 0, 0.7);
             transition: all 0.2s linear;
           }
         }
@@ -194,10 +191,10 @@ main {
         }
         &.aquaBg {
           background-color: $aquaBg;
-          span{
+          span {
             margin-top: 23px;
           }
-          img{
+          img {
             position: absolute;
             top: 8px;
             right: 0;
@@ -205,7 +202,7 @@ main {
         }
         &.sandBg {
           background-color: $sandBg;
-          img{
+          img {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -213,7 +210,7 @@ main {
         }
         &.pinkBg {
           background-color: $pinkBg;
-          img{
+          img {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -221,20 +218,20 @@ main {
         }
         &.yellowBg {
           background-color: $yellowBg;
-          &:hover{
-            h1{
+          &:hover {
+            h1 {
               transform: scale(1, 1);
               transition: all 0.2s linear;
             }
-            h4{
+            h4 {
               padding-left: 20px;
               max-width: 132px;
               transition: all 0.2s linear;
             }
           }
         }
-        h6{
-          color:  $standartBg;
+        h6 {
+          color: $standartBg;
           font-size: 30px;
           font-weight: 700;
           text-align: left;
@@ -242,16 +239,16 @@ main {
           max-width: 185px;
           word-wrap: break-word;
         }
-        span{
-          color:  $standartBg;
+        span {
+          color: $standartBg;
           font-size: 18px;
           font-weight: 700;
           line-height: 19.5px;
           margin-left: 4px;
           text-transform: uppercase;
         }
-        h5{
-          color:  rgba(0, 0, 0, 0.5);
+        h5 {
+          color: rgba(0, 0, 0, 0.5);
           font-size: 49px;
           font-weight: 700;
           position: absolute;
@@ -259,21 +256,21 @@ main {
           bottom: 8%;
           transition: all 0.2s linear;
         }
-        h1{
+        h1 {
           transform: scale(1, -1);
-          color:  $standartBg;
+          color: $standartBg;
           font-size: 106px;
           font-weight: 700;
           margin: 0 auto;
           transition: all 0.2s linear;
         }
-        h2{
-          color:  $standartBg;
+        h2 {
+          color: $standartBg;
           font-size: 64px;
           font-weight: 700;
           margin: 0 auto;
         }
-        h4{
+        h4 {
           display: inline-block;
           max-width: 127px;
           padding-left: 15px;
@@ -286,5 +283,118 @@ main {
         }
       }
     }
+  }
+  .categories {
+    background-image: url('../../app/img/categoties_img.jpg');
+    height: 560px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    h2 {
+      font-family: 'Josefin Slab', serif;
+      color: $standartBg;
+      font-size: 116px;
+      font-weight: 400;
+      padding-top: 63px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .bubbles {
+      display: flex;
+      flex-direction: row;
+      .circle {
+        width: 199px;
+        height: 199px;
+        border-radius: 50%;
+        background: rgba(88, 219, 211, 0.7);;
+        text-align: center;
+        position: absolute;
+        bottom: 26.3%;
+        transition: all 0.2s linear;
+
+        &:hover{
+          transform: scale(1.1);
+          transition: all 0.2s linear;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          background: rgba(88,219,211,1) !important;
+          img{
+            transition: 0.6s;
+            transform: scale(-1, 1);
+          }
+        }
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 199px;
+          height: 199px;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 18px;
+          color: $standartBg;
+          img{
+            transition: 0.6s;
+          }
+        }
+      }
+      #first{
+        left:-5.93%;
+        bottom: 20.7%;
+        &:hover{
+          transform: none;
+          box-shadow: none;
+          background: rgba(88,219,211,0.7) !important;
+        }
+      }
+      #heelOne{
+        left:6.2%;
+        bottom:26.43%;
+      }
+      #tShirtOne{
+        left:17%;
+        bottom:13%;
+        background: rgba(88,219,211,0.9);
+      }
+      #jeans{
+        left:29.26%;
+        bottom:24.46%;
+      }
+      #cap{
+        right:43.22%;
+        bottom: 19.1%;
+        background: rgba(88,219,211,0.9);
+      }
+      #heelTwo{
+        right:30.43%;
+        bottom: 13%;
+      }
+      #tShirtTwo{
+        right:18.3%;
+        bottom: 23.5%;
+        background: rgba(88,219,211,0.9);
+      }
+      #umbrella {
+        right: 7.6%;
+        bottom: 8.5%;
+      }
+      #last {
+        right: -2.2%;
+        background: rgba(88,219,211,0.9);
+        &:hover{
+          transform: none;
+          box-shadow: none;
+          background: rgba(88,219,211,0.9) !important;
+        }
+      }
+    }
+  }
+  .levis {
+    display: block;
+    width: 100%;
+    height: 345px;
+    background: #fff;
   }
 }
